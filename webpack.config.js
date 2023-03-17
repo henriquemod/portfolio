@@ -1,0 +1,53 @@
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/index.tsx",
+  output: {
+    path: path.join(__dirname, "public/js"),
+    publicPath: "/public/js",
+    filename: "bundle.js",
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+    alias: {
+      "@": path.join(__dirname, "src"),
+    },
+  },
+  module: {
+    rules: [
+      {
+        test: /.ts(x?)$/,
+        loader: "ts-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    historyApiFallback: true,
+    devMiddleware: {
+      writeToDisk: true,
+    },
+  },
+};
