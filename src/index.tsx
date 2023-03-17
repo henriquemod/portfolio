@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-    <React.StrictMode>
-        <h1>Henrique Souza</h1>
-    </React.StrictMode>
+  <React.StrictMode>
+    <h1>Henrique Souza</h1>
+  </React.StrictMode>
 )

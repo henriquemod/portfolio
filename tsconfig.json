@@ -8,13 +8,13 @@
     "jsx": "react",
     "rootDirs": ["src"],
     "baseUrl": "src",
-    "outDir": "dist",
     "paths": {
       "@/*": ["*"],
       "@/tests/*": ["../tests/*"]
     },
     "allowJs": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
   },
   "include": ["src"]
 }
