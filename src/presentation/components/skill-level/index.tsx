@@ -4,24 +4,28 @@ import Styles from './styles.scss'
 const MAX_BLOCKS = 5
 
 const Block = (): JSX.Element => {
-  return <div className={Styles.block} />
+  return <div role="rank-block" className={Styles.block} />
 }
 
 const BlockNone = (): JSX.Element => {
-  return <div className={`${Styles.block} ${Styles.colorNone}`} />
+  return (
+    <div
+      role="rank-block-none"
+      className={`${Styles.block} ${Styles.colorNone}`}
+    />
+  )
 }
 
 interface IProps {
   label: string
-  level: number
+  level: 0 | 1 | 2 | 3 | 4 | 5
 }
 
 const SkillLevel = (props: IProps): JSX.Element => {
-  const correctLevel = props.level > 5 ? 5 : props.level
   const blocks: JSX.Element[] = []
 
   for (let i = 1; i <= MAX_BLOCKS; i++) {
-    if (i <= correctLevel) {
+    if (i <= props.level) {
       blocks.push(<Block key={i} />)
     } else {
       blocks.push(<BlockNone key={i} />)

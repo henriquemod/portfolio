@@ -1,0 +1,911 @@
+{
+  "/home/henrique/Development/Personal/portifolio/src/presentation/components/box/index.tsx": {
+    "path": "/home/henrique/Development/Personal/portifolio/src/presentation/components/box/index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 9,
+          "column": 12
+        },
+        "end": {
+          "line": 26,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 10,
+          "column": 13
+        },
+        "end": {
+          "line": 10,
+          "column": 25
+        }
+      },
+      "2": {
+        "start": {
+          "line": 11,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 3
+        }
+      },
+      "3": {
+        "start": {
+          "line": 13,
+          "column": 6
+        },
+        "end": {
+          "line": 13,
+          "column": 25
+        }
+      },
+      "4": {
+        "start": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 11
+        }
+      },
+      "5": {
+        "start": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 26
+        }
+      },
+      "6": {
+        "start": {
+          "line": 17,
+          "column": 6
+        },
+        "end": {
+          "line": 17,
+          "column": 11
+        }
+      },
+      "7": {
+        "start": {
+          "line": 19,
+          "column": 6
+        },
+        "end": {
+          "line": 19,
+          "column": 25
+        }
+      },
+      "8": {
+        "start": {
+          "line": 20,
+          "column": 6
+        },
+        "end": {
+          "line": 20,
+          "column": 11
+        }
+      },
+      "9": {
+        "start": {
+          "line": 22,
+          "column": 6
+        },
+        "end": {
+          "line": 22,
+          "column": 29
+        }
+      },
+      "10": {
+        "start": {
+          "line": 23,
+          "column": 6
+        },
+        "end": {
+          "line": 23,
+          "column": 11
+        }
+      },
+      "11": {
+        "start": {
+          "line": 25,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
+          "column": 78
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 9,
+            "column": 12
+          },
+          "end": {
+            "line": 9,
+            "column": 13
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 9,
+            "column": 44
+          },
+          "end": {
+            "line": 26,
+            "column": 1
+          }
+        },
+        "line": 9
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 2
+          },
+          "end": {
+            "line": 24,
+            "column": 3
+          }
+        },
+        "type": "switch",
+        "locations": [
+          {
+            "start": {
+              "line": 12,
+              "column": 4
+            },
+            "end": {
+              "line": 14,
+              "column": 11
+            }
+          },
+          {
+            "start": {
+              "line": 15,
+              "column": 4
+            },
+            "end": {
+              "line": 17,
+              "column": 11
+            }
+          },
+          {
+            "start": {
+              "line": 18,
+              "column": 4
+            },
+            "end": {
+              "line": 20,
+              "column": 11
+            }
+          },
+          {
+            "start": {
+              "line": 21,
+              "column": 4
+            },
+            "end": {
+              "line": 23,
+              "column": 11
+            }
+          }
+        ],
+        "line": 11
+      }
+    },
+    "s": {
+      "0": 9,
+      "1": 18,
+      "2": 18,
+      "3": 5,
+      "4": 5,
+      "5": 6,
+      "6": 6,
+      "7": 5,
+      "8": 5,
+      "9": 2,
+      "10": 2,
+      "11": 18
+    },
+    "f": {
+      "0": 18
+    },
+    "b": {
+      "0": [
+        5,
+        6,
+        5,
+        2
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "498c4dc20a90b3e96cba86e900739bdd1ab4d42b"
+  },
+  "/home/henrique/Development/Personal/portifolio/src/presentation/components/skill-level/index.tsx": {
+    "path": "/home/henrique/Development/Personal/portifolio/src/presentation/components/skill-level/index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 4,
+          "column": 19
+        },
+        "end": {
+          "line": 4,
+          "column": 20
+        }
+      },
+      "1": {
+        "start": {
+          "line": 6,
+          "column": 14
+        },
+        "end": {
+          "line": 8,
+          "column": 1
+        }
+      },
+      "2": {
+        "start": {
+          "line": 7,
+          "column": 2
+        },
+        "end": {
+          "line": 7,
+          "column": 59
+        }
+      },
+      "3": {
+        "start": {
+          "line": 10,
+          "column": 18
+        },
+        "end": {
+          "line": 17,
+          "column": 1
+        }
+      },
+      "4": {
+        "start": {
+          "line": 11,
+          "column": 2
+        },
+        "end": {
+          "line": 16,
+          "column": 3
+        }
+      },
+      "5": {
+        "start": {
+          "line": 24,
+          "column": 19
+        },
+        "end": {
+          "line": 43,
+          "column": 1
+        }
+      },
+      "6": {
+        "start": {
+          "line": 25,
+          "column": 32
+        },
+        "end": {
+          "line": 25,
+          "column": 34
+        }
+      },
+      "7": {
+        "start": {
+          "line": 27,
+          "column": 2
+        },
+        "end": {
+          "line": 33,
+          "column": 3
+        }
+      },
+      "8": {
+        "start": {
+          "line": 27,
+          "column": 15
+        },
+        "end": {
+          "line": 27,
+          "column": 16
+        }
+      },
+      "9": {
+        "start": {
+          "line": 28,
+          "column": 4
+        },
+        "end": {
+          "line": 32,
+          "column": 5
+        }
+      },
+      "10": {
+        "start": {
+          "line": 29,
+          "column": 6
+        },
+        "end": {
+          "line": 29,
+          "column": 36
+        }
+      },
+      "11": {
+        "start": {
+          "line": 31,
+          "column": 6
+        },
+        "end": {
+          "line": 31,
+          "column": 40
+        }
+      },
+      "12": {
+        "start": {
+          "line": 35,
+          "column": 2
+        },
+        "end": {
+          "line": 42,
+          "column": 3
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 6,
+            "column": 14
+          },
+          "end": {
+            "line": 6,
+            "column": 15
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 33
+          },
+          "end": {
+            "line": 8,
+            "column": 1
+          }
+        },
+        "line": 6
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 10,
+            "column": 18
+          },
+          "end": {
+            "line": 10,
+            "column": 19
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 10,
+            "column": 37
+          },
+          "end": {
+            "line": 17,
+            "column": 1
+          }
+        },
+        "line": 10
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 24,
+            "column": 19
+          },
+          "end": {
+            "line": 24,
+            "column": 20
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 24,
+            "column": 51
+          },
+          "end": {
+            "line": 43,
+            "column": 1
+          }
+        },
+        "line": 24
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 28,
+            "column": 4
+          },
+          "end": {
+            "line": 32,
+            "column": 5
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 28,
+              "column": 4
+            },
+            "end": {
+              "line": 32,
+              "column": 5
+            }
+          },
+          {
+            "start": {
+              "line": 30,
+              "column": 11
+            },
+            "end": {
+              "line": 32,
+              "column": 5
+            }
+          }
+        ],
+        "line": 28
+      }
+    },
+    "s": {
+      "0": 4,
+      "1": 4,
+      "2": 30,
+      "3": 4,
+      "4": 10,
+      "5": 4,
+      "6": 8,
+      "7": 8,
+      "8": 8,
+      "9": 40,
+      "10": 30,
+      "11": 10,
+      "12": 8
+    },
+    "f": {
+      "0": 30,
+      "1": 10,
+      "2": 8
+    },
+    "b": {
+      "0": [
+        30,
+        10
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "080cc0ae09bd87acf6d8d6edc6ef17625b5ef331"
+  },
+  "/home/henrique/Development/Personal/portifolio/src/presentation/components/board/index.tsx": {
+    "path": "/home/henrique/Development/Personal/portifolio/src/presentation/components/board/index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 14,
+          "column": 14
+        },
+        "end": {
+          "line": 22,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 21,
+          "column": 3
+        }
+      },
+      "2": {
+        "start": {
+          "line": 18,
+          "column": 8
+        },
+        "end": {
+          "line": 18,
+          "column": 70
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 14,
+            "column": 14
+          },
+          "end": {
+            "line": 14,
+            "column": 15
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 14,
+            "column": 46
+          },
+          "end": {
+            "line": 22,
+            "column": 1
+          }
+        },
+        "line": 14
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 17,
+            "column": 25
+          },
+          "end": {
+            "line": 17,
+            "column": 26
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 18,
+            "column": 8
+          },
+          "end": {
+            "line": 18,
+            "column": 70
+          }
+        },
+        "line": 18
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 2,
+      "1": 2,
+      "2": 6
+    },
+    "f": {
+      "0": 2,
+      "1": 6
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "1f75d25117daa9a5e4d6d58ca4b6ba9f1aebd54d"
+  },
+  "/home/henrique/Development/Personal/portifolio/src/presentation/components/tag/index.tsx": {
+    "path": "/home/henrique/Development/Personal/portifolio/src/presentation/components/tag/index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 8,
+          "column": 12
+        },
+        "end": {
+          "line": 14,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 9,
+          "column": 2
+        },
+        "end": {
+          "line": 13,
+          "column": 3
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 8,
+            "column": 12
+          },
+          "end": {
+            "line": 8,
+            "column": 13
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 44
+          },
+          "end": {
+            "line": 14,
+            "column": 1
+          }
+        },
+        "line": 8
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 4,
+      "1": 8
+    },
+    "f": {
+      "0": 8
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "7e121ec66e6c293b28bba6788bf4933c3fea1018"
+  },
+  "/home/henrique/Development/Personal/portifolio/src/presentation/components/chapter/index.tsx": {
+    "path": "/home/henrique/Development/Personal/portifolio/src/presentation/components/chapter/index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 11,
+          "column": 16
+        },
+        "end": {
+          "line": 31,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 12,
+          "column": 2
+        },
+        "end": {
+          "line": 30,
+          "column": 3
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 11,
+            "column": 16
+          },
+          "end": {
+            "line": 11,
+            "column": 17
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 48
+          },
+          "end": {
+            "line": 31,
+            "column": 1
+          }
+        },
+        "line": 11
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 9
+          },
+          "end": {
+            "line": 24,
+            "column": 9
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 20,
+              "column": 9
+            },
+            "end": {
+              "line": 20,
+              "column": 23
+            }
+          },
+          {
+            "start": {
+              "line": 21,
+              "column": 10
+            },
+            "end": {
+              "line": 23,
+              "column": 16
+            }
+          }
+        ],
+        "line": 20
+      }
+    },
+    "s": {
+      "0": 3,
+      "1": 5
+    },
+    "f": {
+      "0": 5
+    },
+    "b": {
+      "0": [
+        5,
+        3
+      ]
+    },
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "b58ddc515797b3b8b889a11cbc9afec6ce886526"
+  },
+  "/home/henrique/Development/Personal/portifolio/src/presentation/components/card/index.tsx": {
+    "path": "/home/henrique/Development/Personal/portifolio/src/presentation/components/card/index.tsx",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 23,
+          "column": 13
+        },
+        "end": {
+          "line": 55,
+          "column": 1
+        }
+      },
+      "1": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 54,
+          "column": 3
+        }
+      },
+      "2": {
+        "start": {
+          "line": 34,
+          "column": 12
+        },
+        "end": {
+          "line": 36,
+          "column": 16
+        }
+      },
+      "3": {
+        "start": {
+          "line": 50,
+          "column": 10
+        },
+        "end": {
+          "line": 50,
+          "column": 37
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 23,
+            "column": 13
+          },
+          "end": {
+            "line": 23,
+            "column": 14
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 45
+          },
+          "end": {
+            "line": 55,
+            "column": 1
+          }
+        },
+        "line": 23
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 33,
+            "column": 30
+          },
+          "end": {
+            "line": 33,
+            "column": 31
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 34,
+            "column": 12
+          },
+          "end": {
+            "line": 36,
+            "column": 16
+          }
+        },
+        "line": 34
+      },
+      "2": {
+        "name": "(anonymous_2)",
+        "decl": {
+          "start": {
+            "line": 49,
+            "column": 24
+          },
+          "end": {
+            "line": 49,
+            "column": 25
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 50,
+            "column": 10
+          },
+          "end": {
+            "line": 50,
+            "column": 37
+          }
+        },
+        "line": 50
+      }
+    },
+    "branchMap": {},
+    "s": {
+      "0": 2,
+      "1": 2,
+      "2": 4,
+      "3": 6
+    },
+    "f": {
+      "0": 2,
+      "1": 4,
+      "2": 6
+    },
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "58ee07c74bec0de4a1750be35dfecc92ea2b0b81"
+  }
+}

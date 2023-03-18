@@ -21,11 +21,6 @@ interface IProps {
 }
 
 const Card = (props: IProps): JSX.Element => {
-  const newMessage =
-    props.message.length > 100
-      ? `${props.message.substring(0, 100)}...`
-      : props.message
-
   return (
     <Box size="medium">
       <div className={Styles.header}>
@@ -47,7 +42,7 @@ const Card = (props: IProps): JSX.Element => {
           <h1>{props.title}</h1>
         </div>
         <div className={Styles.message}>
-          <p>{newMessage}</p>
+          <p>{props.message}</p>
         </div>
       </div>
       <div className={Styles.tags}>

@@ -11,5 +11,10 @@
       }
     ]
   ],
-  "plugins": []
+  "plugins": [],
+  "env": {
+    "test": {
+      "plugins": [ "istanbul" ]
+    }
+  }
 }

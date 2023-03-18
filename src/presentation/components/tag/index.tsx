@@ -8,7 +8,7 @@ interface IProps {
 const Tag = (props: IProps): JSX.Element => {
   return (
     <div className={Styles.container}>
-      <span>{props.label}</span>
+      <span role="tag">{props.label}</span>
     </div>
   )
 }
