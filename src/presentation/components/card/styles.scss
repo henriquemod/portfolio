@@ -1,0 +1,59 @@
+@import '../../styles/colors.scss';
+
+.container {
+    border-radius: 25px;
+    width: 480px;
+    height: 350px;
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.actions {
+    & a {
+        text-decoration: none;
+        color: black;
+        margin-left: 1.25rem;
+    }
+}
+
+.content {
+    flex: 1;
+    margin-bottom: 2rem;
+    & h1 {
+        font-size: 2.75rem;
+        margin-bottom: 1rem;
+        color: $gray100;
+    }
+
+    & p {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        color: $gray100;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    & span {
+        margin-right: 1rem;
+    }
+}
+
+.cardIcon {
+    color: $main100;
+}

@@ -1,0 +1,10 @@
+@import '../../styles/colors.scss';
+
+.container {
+    & span {
+        background-color: $gray50;
+        padding: 7px 12px;
+        border-radius: 5px;
+    }
+    
+}
