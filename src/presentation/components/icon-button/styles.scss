@@ -1,0 +1,20 @@
+@import '../../styles/colors.scss';
+
+.container {
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $main100;
+        font-weight: 700;
+    }
+}
+
+.mr {
+    margin-right: .5rem;
+}
+
+.icon {
+    color: $main100;
+}
