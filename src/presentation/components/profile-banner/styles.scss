@@ -1,0 +1,66 @@
+@import '../../styles/colors.scss';
+
+.container {
+  max-width: 992px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  line-height: 5rem;
+  & h2,
+  h3,
+  span {
+    font-weight: bold;
+    font-size: 4rem;
+    letter-spacing: -0.2rem;
+  }
+}
+
+.main {
+  color: $main100;
+
+  & span {
+    color: $dark;
+  }
+}
+
+.profileBlock {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -1.25rem;
+  right: -1.25rem;
+  border-top: 4px solid $main100;
+  border-right: 4px solid $main100;
+}
+
+.profilePic {
+  position: relative;
+  & img {
+    position: absolute;
+    position: sticky;
+    max-width: 300px;
+    height: 100%;
+    margin-left: 1rem;
+  }
+
+  // border-top: 4px solid $main100;
+  // border-right: 4px solid $main100;
+
+  /* adjust values as needed */
+}
+.bottom {
+  margin-top: 3rem;
+
+  & p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}

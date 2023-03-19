@@ -1,27 +1,44 @@
 @import '../../styles/colors.scss';
 
 .button {
-    border: 0;
-    border-radius: 4px;
-    color: $white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    height: 40px;
-    padding: 0 16px;
-    transition: background-color 0.2s;
-    background-color: $main75;
-    
-    &:hover {
-        background-color: $main100;
-    }
+  border: 0;
+  border-radius: 4px;
+  color: $white;
+  cursor: pointer;
+  font-weight: 700;
+  height: 40px;
+  padding: 0 16px;
+  transition: background-color 0.2s;
+  background-color: $main75;
+
+  &:hover {
+    background-color: $main100;
+  }
 }
 
 .disabled {
-    background-color: $gray75;
-    cursor: not-allowed;
+  background-color: $gray75;
+  cursor: not-allowed;
 
-    &:hover {
-        background-color: $gray75;
-    }
+  &:hover {
+    background-color: $gray75;
+  }
+}
+
+.small {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.medium {
+  height: 60px;
+  padding: 0 40px;
+  font-size: 20px;
+}
+
+.large {
+  height: 80px;
+  padding: 0 60px;
+  font-size: 24px;
 }

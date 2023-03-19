@@ -8,8 +8,15 @@ const meta = {
   title: 'Components/Button',
   component: Button,
   tags: ['autodocs'],
+  args: {},
   argTypes: {
-    label: { control: 'text' }
+    label: { control: 'text' },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large']
+      }
+    }
   }
 } satisfies Meta<typeof Button>
 
@@ -65,4 +72,25 @@ Disabled.play = async ({ canvasElement, step, args }) => {
 
     expect(args.handleClick).toHaveBeenCalledTimes(0)
   })
+}
+
+export const Small: Story = {
+  args: {
+    label: 'Click Me',
+    size: 'small'
+  }
+}
+
+export const Medium: Story = {
+  args: {
+    label: 'Click Me',
+    size: 'medium'
+  }
+}
+
+export const Large: Story = {
+  args: {
+    label: 'Click Me',
+    size: 'large'
+  }
 }
