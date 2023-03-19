@@ -9,13 +9,17 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
-    "sb-coverage": "yarn test-storybook --coverage && npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook"
+    "sb-coverage": "yarn test-storybook --coverage && npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook",
+    "lint": "eslint --ext .tsx --ext .ts src/",
+    "pre-commit": "lint-staged"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "7.20.2",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@istanbuljs/nyc-config-typescript": "1.0.2",
     "@storybook/addon-coverage": "0.0.8",
     "@storybook/addon-essentials": "7.0.0-rc.4",
@@ -42,6 +46,8 @@
     "eslint-plugin-promise": "6.1.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-storybook": "0.6.11",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
     "prop-types": "15.8.1",
     "sass-loader": "13.2.0",
     "storybook": "7.0.0-rc.4",

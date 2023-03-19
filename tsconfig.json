@@ -8,6 +8,7 @@
     "jsx": "react",
     "rootDirs": ["src"],
     "baseUrl": "src",
+    "outDir": "dist",
     "paths": {
       "@/*": ["*"],
       "@/tests/*": ["../tests/*"]
@@ -16,5 +17,5 @@
     "resolveJsonModule": true,
     "strictNullChecks": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

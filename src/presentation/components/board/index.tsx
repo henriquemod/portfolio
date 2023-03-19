@@ -1,10 +1,11 @@
 import * as React from 'react'
 import Box from '../box'
 import SkillLevel from '../skill-level'
+import type { Score } from '../skill-level'
 
 interface Skill {
   title: string
-  level: number
+  level: Score
 }
 
 interface IProps {

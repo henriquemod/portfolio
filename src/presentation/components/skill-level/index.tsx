@@ -3,6 +3,8 @@ import Styles from './styles.scss'
 
 const MAX_BLOCKS = 5
 
+export type Score = 0 | 1 | 2 | 3 | 4 | 5
+
 const Block = (): JSX.Element => {
   return <div role="rank-block" className={Styles.block} />
 }
@@ -18,7 +20,7 @@ const BlockNone = (): JSX.Element => {
 
 interface IProps {
   label: string
-  level: 0 | 1 | 2 | 3 | 4 | 5
+  level: Score
 }
 
 const SkillLevel = (props: IProps): JSX.Element => {
