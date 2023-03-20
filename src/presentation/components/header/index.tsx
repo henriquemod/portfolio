@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Styles from './styles.scss'
 
-interface IMenuItem {
+export interface IMenuItem {
   label: string
   url: string
   active?: boolean

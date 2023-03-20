@@ -19,7 +19,7 @@ const Chapter = (props: IProps): JSX.Element => {
         <p>{props.description}</p>
         {props.children && (
           <div data-testid="child-box" className={Styles.children}>
-            {props.children}{' '}
+            {props.children}
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@
 
 .container {
   max-width: 992px;
+  margin: 2rem 0;
 }
 
 .top {
@@ -46,7 +47,7 @@
   & img {
     position: absolute;
     position: sticky;
-    max-width: 300px;
+    max-width: 250px;
     height: 100%;
     margin-left: 1rem;
   }

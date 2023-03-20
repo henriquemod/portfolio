@@ -2,7 +2,7 @@ import * as React from 'react'
 import Button from '../button'
 import Styles from './styles.scss'
 
-interface IProps {
+export interface ProfileBannerProps {
   name: string
   job: string
   message: string
@@ -10,7 +10,7 @@ interface IProps {
   handleContactClick: () => void
 }
 
-const ProfileBanner = (props: IProps): JSX.Element => {
+const ProfileBanner = (props: ProfileBannerProps): JSX.Element => {
   return (
     <div className={Styles.container}>
       <div className={Styles.top}>

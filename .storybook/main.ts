@@ -34,6 +34,12 @@ const config: StorybookConfig = {
 }
 
 config.webpackFinal = async (config) => {
+  if (config.resolve) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': path.resolve(__dirname, '../src/')
+    }
+  }
   config.module?.rules?.push({
     test: /\.scss$/,
     use: [
