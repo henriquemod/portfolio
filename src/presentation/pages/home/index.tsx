@@ -66,7 +66,6 @@ const Home = (props: IProps): JSX.Element => {
             <Lateral
               rotateIcons
               style={{
-                // width: '5px',
                 position: 'absolute',
                 left: '-225px',
                 top: '160px'

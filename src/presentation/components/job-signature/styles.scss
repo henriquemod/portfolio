@@ -1,0 +1,16 @@
+@import '../../styles/colors.scss';
+
+.container {
+  display: flex;
+
+  & h3,
+  p {
+    font-size: 2rem;
+    letter-spacing: -1px;
+
+    &:first-child {
+      margin-right: 1.5rem;
+      color: $main100;
+    }
+  }
+}
