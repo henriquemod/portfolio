@@ -4,7 +4,7 @@ import Styles from './styles.scss'
 interface IProps {
   id: number
   title: string
-  description: string
+  description?: string
   children?: React.ReactNode
 }
 

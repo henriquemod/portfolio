@@ -3,6 +3,7 @@ import Card from '@/presentation/components/card'
 import Chapter from '@/presentation/components/chapter'
 import Header, { type IMenuItem } from '@/presentation/components/header'
 import IconButton from '@/presentation/components/icon-button'
+import JobSignature from '@/presentation/components/job-signature'
 import Lateral from '@/presentation/components/lateral'
 import ProfileBanner, {
   type ProfileBannerProps
@@ -188,6 +189,28 @@ const Home = (props: IProps): JSX.Element => {
             actions={[]}
           />
         </div>
+      </Chapter>
+      <Chapter id={4} title="My Work Career">
+        <JobSignature
+          companyName="Microsoft"
+          jobTitle="Software Engineer"
+          period="2020 - Present"
+        />
+        <JobSignature
+          companyName="Microsoft"
+          jobTitle="Software Engineer"
+          period="2020 - Present"
+        />
+        <JobSignature
+          companyName="Microsoft"
+          jobTitle="Software Engineer"
+          period="2020 - Present"
+        />
+        <JobSignature
+          companyName="Microsoft"
+          jobTitle="Software Engineer"
+          period="2020 - Present"
+        />
       </Chapter>
     </div>
   )
