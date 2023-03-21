@@ -2,17 +2,25 @@ import type { Preview } from '@storybook/react'
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 const customViewports = {
-  kindleFire2: {
+  web: {
     name: 'Web',
     styles: {
       width: '992px',
       height: '963px'
+    }
+  },
+  wide: {
+    name: 'Wide',
+    styles: {
+      width: '1920px',
+      height: '900px'
     }
   }
 }
 
 const preview: Preview = {
   parameters: {
+    layout: 'centered',
     viewport: {
       viewports: {
         ...MINIMAL_VIEWPORTS,
