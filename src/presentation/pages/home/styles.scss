@@ -17,6 +17,16 @@ $breakpoint: 992px;
   grid-template-columns: repeat(2, 1fr);
 }
 
+.lateralContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBlock {
+  transform: rotate(-90deg);
+}
+
 @media (max-width: $breakpoint) {
   .grid {
     grid-template-columns: 1fr;

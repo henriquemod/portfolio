@@ -2,9 +2,13 @@ import Board from '@/presentation/components/board'
 import Card from '@/presentation/components/card'
 import Chapter from '@/presentation/components/chapter'
 import Header, { type IMenuItem } from '@/presentation/components/header'
+import IconButton from '@/presentation/components/icon-button'
+import Lateral from '@/presentation/components/lateral'
 import ProfileBanner, {
   type ProfileBannerProps
 } from '@/presentation/components/profile-banner'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react'
 import Styles from './styles.scss'
 
@@ -57,7 +61,40 @@ const Home = (props: IProps): JSX.Element => {
     <div className={Styles.container}>
       <Header align="right" menuItens={options} />
       {bannerData && (
-        <div className={Styles.row}>
+        <div className={`${Styles.lateralContainer}`}>
+          <div className={Styles.sideBlock}>
+            <Lateral
+              rotateIcons
+              style={{
+                // width: '5px',
+                position: 'absolute',
+                left: '-225px',
+                top: '160px'
+              }}
+              content={[
+                <IconButton
+                  key={1}
+                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
+                  href=""
+                />,
+                <IconButton
+                  key={2}
+                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
+                  href=""
+                />,
+                <IconButton
+                  key={1}
+                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
+                  href=""
+                />,
+                <IconButton
+                  key={2}
+                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
+                  href=""
+                />
+              ]}
+            />
+          </div>
           <ProfileBanner
             avatarUrl={bannerData.avatarUrl}
             handleContactClick={() => {}}
@@ -65,6 +102,17 @@ const Home = (props: IProps): JSX.Element => {
             job={bannerData.job}
             message={bannerData.message}
           />
+          <div className={Styles.sideBlock}>
+            <Lateral
+              style={{
+                position: 'absolute',
+                right: '-260px',
+                top: '280px'
+              }}
+              className={Styles.lateralLeft}
+              content="beltrano@gmail.com"
+            />
+          </div>
         </div>
       )}
       <div className={Styles.row}>
