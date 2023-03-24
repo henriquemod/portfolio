@@ -1,4 +1,5 @@
 const path = require('path')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   mode: 'development',
@@ -49,5 +50,6 @@ module.exports = {
     devMiddleware: {
       writeToDisk: true
     }
-  }
+  },
+  plugins: [new Dotenv()]
 }
