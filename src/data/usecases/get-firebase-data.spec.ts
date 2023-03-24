@@ -32,7 +32,8 @@ describe('RemoteAuthentication', () => {
         job: 'any_job',
         message: 'any_message',
         name: 'any_name'
-      }
+      },
+      jobSignatures: []
     })
   })
 })

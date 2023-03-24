@@ -62,8 +62,8 @@ const Home = (props: IProps): JSX.Element => {
               rotateIcons
               style={{
                 position: 'absolute',
-                left: '-225px',
-                top: '160px'
+                left: '-250px',
+                top: '140px'
               }}
               content={[
                 <IconButton
@@ -100,7 +100,7 @@ const Home = (props: IProps): JSX.Element => {
             <Lateral
               style={{
                 position: 'absolute',
-                right: '-260px',
+                right: '-235px',
                 top: '280px'
               }}
               className={Styles.lateralLeft}
