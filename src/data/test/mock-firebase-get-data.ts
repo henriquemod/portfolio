@@ -1,12 +1,10 @@
-import {
-  type FirebaseResponse,
-  type FirebaseGetDataClient
-} from '@/data/protocols/firebase'
+import { type FirebaseGetDataClient } from '@/data/protocols/firebase'
+import { type ProfileDataModel } from '@/domain/models/profile-data-model'
 
 export class FirebaseGetDataSpy implements FirebaseGetDataClient {
-  response: FirebaseResponse
+  response: ProfileDataModel
 
-  async get(path: string): Promise<FirebaseResponse> {
+  async get(path: string): Promise<ProfileDataModel> {
     return Promise.resolve({
       profileBannerData: {
         name: 'any_name',

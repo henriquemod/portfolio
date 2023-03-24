@@ -12,7 +12,8 @@
     "test-storybook": "test-storybook",
     "sb-coverage": "yarn test-storybook --coverage && npx nyc report --reporter=lcov -t coverage/storybook --report-dir coverage/storybook",
     "lint": "eslint --ext .tsx --ext .ts src/",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "type-check": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

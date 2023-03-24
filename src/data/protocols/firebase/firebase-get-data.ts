@@ -1,5 +1,5 @@
-import type { FirebaseResponse } from '@/data/protocols/firebase/firebase-response'
+import { type ProfileDataModel } from '@/domain/models/profile-data-model'
 
 export interface FirebaseGetDataClient {
-  get: (path: string) => Promise<FirebaseResponse>
+  get: (path: string) => Promise<ProfileDataModel>
 }
