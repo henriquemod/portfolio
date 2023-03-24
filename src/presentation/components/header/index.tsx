@@ -20,7 +20,7 @@ const renderListItem = (
 ): JSX.Element => {
   const activeStyle = active ? Styles.active : ''
   return (
-    <li className={`${Styles.listItem} ${activeStyle}`}>
+    <li key={index} className={`${Styles.listItem} ${activeStyle}`}>
       <a href={url} target="_self">
         <span>{`${index.toString().padStart(2, '0')}. `}</span>
         {`<${label} />`}

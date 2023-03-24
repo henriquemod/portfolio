@@ -2,6 +2,8 @@ $breakpoint: 992px;
 
 .container {
   max-width: $breakpoint;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .row {

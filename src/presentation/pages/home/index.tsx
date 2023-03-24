@@ -1,3 +1,5 @@
+import { type ProfileDataModel } from '@/domain/models/profile-data-model'
+import { type FirebaseClient } from '@/infra/firebase/firebase-get-data'
 import Board from '@/presentation/components/board'
 import Card from '@/presentation/components/card'
 import Chapter from '@/presentation/components/chapter'
@@ -5,9 +7,7 @@ import Header, { type IMenuItem } from '@/presentation/components/header'
 import IconButton from '@/presentation/components/icon-button'
 import JobSignature from '@/presentation/components/job-signature'
 import Lateral from '@/presentation/components/lateral'
-import ProfileBanner, {
-  type ProfileBannerProps
-} from '@/presentation/components/profile-banner'
+import ProfileBanner from '@/presentation/components/profile-banner'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react'
@@ -37,22 +37,17 @@ const options: IMenuItem[] = [
 ]
 
 interface IProps {
-  getProfile: () => Promise<{
-    avatarUrl: string
-    name: string
-    job: string
-    message: string
-  }>
+  firebaseClient: FirebaseClient
 }
 
 const Home = (props: IProps): JSX.Element => {
-  const [bannerData, setBannerData] =
-    React.useState<Omit<ProfileBannerProps, 'handleContactClick'>>()
+  const [profileData, setProfileData] = React.useState<ProfileDataModel>()
 
   React.useEffect(() => {
     async function loadProfile(): Promise<void> {
-      const profile = await props.getProfile()
-      setBannerData(profile)
+      const profile = await props.firebaseClient.get('profileData')
+      console.log(profile)
+      setProfileData(profile)
     }
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     loadProfile()
@@ -61,7 +56,7 @@ const Home = (props: IProps): JSX.Element => {
   return (
     <div className={Styles.container}>
       <Header align="right" menuItens={options} />
-      {bannerData && (
+      {profileData && (
         <div className={`${Styles.lateralContainer}`}>
           <div className={Styles.sideBlock}>
             <Lateral
@@ -83,12 +78,12 @@ const Home = (props: IProps): JSX.Element => {
                   href=""
                 />,
                 <IconButton
-                  key={1}
+                  key={3}
                   icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
                   href=""
                 />,
                 <IconButton
-                  key={2}
+                  key={4}
                   icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
                   href=""
                 />
@@ -96,11 +91,11 @@ const Home = (props: IProps): JSX.Element => {
             />
           </div>
           <ProfileBanner
-            avatarUrl={bannerData.avatarUrl}
+            avatarUrl={profileData.bannerProfileData.avatarUrl}
             handleContactClick={() => {}}
-            name={bannerData.name}
-            job={bannerData.job}
-            message={bannerData.message}
+            name={profileData.bannerProfileData.name}
+            job={profileData.bannerProfileData.job}
+            message={profileData.bannerProfileData.message}
           />
           <div className={Styles.sideBlock}>
             <Lateral

@@ -1,5 +1,6 @@
-import { jest } from '@storybook/jest'
+import { makeFirebaseClient } from '@/main/factories/firebase/firebase-client-factory'
 import type { Meta, StoryObj } from '@storybook/react'
+import { getDatabase } from 'firebase/database'
 // import { within } from '@storybook/testing-library'
 // import { expect } from '@storybook/jest'
 
@@ -13,15 +14,7 @@ const meta = {
   component: Home,
   tags: ['autodocs'],
   args: {
-    getProfile: jest.mocked(async () => {
-      return Promise.resolve({
-        avatarUrl: profileUrl,
-        name: 'Bartolomeu',
-        job: 'Java Sr. Developer',
-        message:
-          'With hard work, determination, and a positive mindset, you can achieve anything you set your mind to.'
-      })
-    })
+    firebaseClient: makeFirebaseClient(getDatabase())
   },
   argTypes: {}
 } satisfies Meta<typeof Home>
