@@ -30,6 +30,10 @@ $breakpoint: 992px;
   transform: rotate(-90deg);
 }
 
+.headerContainer {
+  margin-bottom: 4rem;
+}
+
 @media (max-width: $breakpoint) {
   .grid {
     grid-template-columns: 1fr;

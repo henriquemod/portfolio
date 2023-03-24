@@ -54,7 +54,9 @@ const Home = (props: IProps): JSX.Element => {
 
   return (
     <div className={Styles.container}>
-      <Header align="right" menuItens={options} />
+      <div className={Styles.headerContainer}>
+        <Header align="right" menuItens={options} />
+      </div>
       {profileData && (
         <div className={`${Styles.lateralContainer}`}>
           <div className={Styles.sideBlock}>
