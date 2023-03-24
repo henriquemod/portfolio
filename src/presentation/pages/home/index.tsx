@@ -46,7 +46,6 @@ const Home = (props: IProps): JSX.Element => {
   React.useEffect(() => {
     async function loadProfile(): Promise<void> {
       const profile = await props.firebaseClient.get('profileData')
-      console.log(profile)
       setProfileData(profile)
     }
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -91,11 +90,11 @@ const Home = (props: IProps): JSX.Element => {
             />
           </div>
           <ProfileBanner
-            avatarUrl={profileData.bannerProfileData.avatarUrl}
+            avatarUrl={profileData.profileBannerData.avatarUrl}
             handleContactClick={() => {}}
-            name={profileData.bannerProfileData.name}
-            job={profileData.bannerProfileData.job}
-            message={profileData.bannerProfileData.message}
+            name={profileData.profileBannerData.name}
+            job={profileData.profileBannerData.job}
+            message={profileData.profileBannerData.message}
           />
           <div className={Styles.sideBlock}>
             <Lateral
@@ -186,26 +185,14 @@ const Home = (props: IProps): JSX.Element => {
         </div>
       </Chapter>
       <Chapter id={4} title="My Work Career">
-        <JobSignature
-          companyName="Microsoft"
-          jobTitle="Software Engineer"
-          period="2020 - Present"
-        />
-        <JobSignature
-          companyName="Microsoft"
-          jobTitle="Software Engineer"
-          period="2020 - Present"
-        />
-        <JobSignature
-          companyName="Microsoft"
-          jobTitle="Software Engineer"
-          period="2020 - Present"
-        />
-        <JobSignature
-          companyName="Microsoft"
-          jobTitle="Software Engineer"
-          period="2020 - Present"
-        />
+        {profileData?.jobSignatures.map((jobSignature) => (
+          <JobSignature
+            key={jobSignature.id}
+            companyName={jobSignature.company}
+            jobTitle={jobSignature.job}
+            period={jobSignature.period}
+          />
+        ))}
       </Chapter>
     </div>
   )

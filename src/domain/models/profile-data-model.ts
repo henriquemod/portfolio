@@ -1,8 +1,16 @@
+export type JobSignature = {
+  id: string
+  job: string
+  company: string
+  period: string
+}
+
 export type ProfileDataModel = {
-  bannerProfileData: {
+  profileBannerData: {
     name: string
     job: string
     avatarUrl: string
     message: string
   }
+  jobSignatures: JobSignature[]
 }

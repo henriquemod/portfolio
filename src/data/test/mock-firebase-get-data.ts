@@ -8,12 +8,13 @@ export class FirebaseGetDataSpy implements FirebaseGetDataClient {
 
   async get(path: string): Promise<FirebaseResponse> {
     return Promise.resolve({
-      bannerProfileData: {
+      profileBannerData: {
         name: 'any_name',
         job: 'any_job',
         avatarUrl: 'any_avatar_url',
         message: 'any_message'
-      }
+      },
+      jobSignatures: []
     })
   }
 }

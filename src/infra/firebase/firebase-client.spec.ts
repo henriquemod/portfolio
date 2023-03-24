@@ -8,10 +8,11 @@ jest.mock('firebase/database', () => ({
   child: jest.fn(),
   get: jest.fn().mockResolvedValue({
     val: jest.fn().mockReturnValue({
-      bannerProfileData: {
+      profileBannerData: {
         name: 'Henrique',
         description: "I'm a software developer"
-      }
+      },
+      jobSignatures: []
     })
   })
 }))
