@@ -5,6 +5,13 @@ export type JobSignature = {
   period: string
 }
 
+export type Score = 0 | 1 | 2 | 3 | 4 | 5
+
+export interface Skill {
+  title: string
+  score: Score
+}
+
 export type ProfileDataModel = {
   profileBannerData: {
     name: string
@@ -14,4 +21,5 @@ export type ProfileDataModel = {
   }
   aboutMe: string
   jobSignatures: JobSignature[]
+  skillList: Skill[]
 }

@@ -1,9 +1,8 @@
+import { type Score } from '@/domain/models/profile-data-model'
 import * as React from 'react'
 import Styles from './styles.scss'
 
 const MAX_BLOCKS = 5
-
-export type Score = 0 | 1 | 2 | 3 | 4 | 5
 
 const Block = (): JSX.Element => {
   return <div role="rank-block" className={Styles.block} />
@@ -20,14 +19,14 @@ const BlockNone = (): JSX.Element => {
 
 interface IProps {
   label: string
-  level: Score
+  score: Score
 }
 
 const SkillLevel = (props: IProps): JSX.Element => {
   const blocks: JSX.Element[] = []
 
   for (let i = 1; i <= MAX_BLOCKS; i++) {
-    if (i <= props.level) {
+    if (i <= props.score) {
       blocks.push(<Block key={i} />)
     } else {
       blocks.push(<BlockNone key={i} />)

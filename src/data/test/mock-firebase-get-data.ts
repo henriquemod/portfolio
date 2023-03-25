@@ -13,7 +13,8 @@ export class FirebaseGetDataSpy implements FirebaseGetDataClient {
         message: 'any_message'
       },
       aboutMe: 'any_about_me',
-      jobSignatures: []
+      jobSignatures: [],
+      skillList: []
     })
   }
 }

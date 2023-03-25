@@ -128,42 +128,20 @@ const Home = (props: IProps): JSX.Element => {
         </div>
       )}
 
-      <Chapter
-        title="My Skills"
-        description="I little bit about my skills and what I can do for you."
-        id={2}
-      >
-        <div className={Styles.row}>
-          <Board
-            skills={[
-              {
-                title: 'Java',
-                level: 5
-              },
-              {
-                title: 'Spring',
-                level: 5
-              },
-              {
-                title: 'Angular',
-                level: 4
-              },
-              {
-                title: 'React',
-                level: 4
-              },
-              {
-                title: 'Node',
-                level: 4
-              },
-              {
-                title: 'AWS',
-                level: 3
-              }
-            ]}
-          />
-        </div>
-      </Chapter>
+      {loading ? (
+        <ChapterSkeleton id="2" title="My Skills" />
+      ) : (
+        <Chapter
+          id={2}
+          title="My Skills"
+          description="I little bit about my skills and what I can do for you."
+        >
+          <div className={Styles.row}>
+            <Board skills={profileData?.skillList ?? []} />
+          </div>
+        </Chapter>
+      )}
+
       <Chapter
         title="My Portfolio"
         description="Some of my projects and works."

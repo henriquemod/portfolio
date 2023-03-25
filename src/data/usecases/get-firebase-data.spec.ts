@@ -34,7 +34,8 @@ describe('RemoteAuthentication', () => {
         name: 'any_name'
       },
       aboutMe: 'any_about_me',
-      jobSignatures: []
+      jobSignatures: [],
+      skillList: []
     })
   })
 })

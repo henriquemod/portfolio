@@ -19,15 +19,15 @@ export const Primary: Story = {
     skills: [
       {
         title: 'Typescript',
-        level: 4
+        score: 4
       },
       {
         title: 'Storybooks',
-        level: 4
+        score: 4
       },
       {
         title: 'Jest',
-        level: 4
+        score: 4
       }
     ]
   }

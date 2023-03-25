@@ -32,6 +32,28 @@ export class FakeFirebaseClient implements GetProfileData {
           company: 'IBM',
           period: '2019 - Present'
         }
+      ],
+      skillList: [
+        {
+          title: 'Java',
+          score: 5
+        },
+        {
+          title: 'Spring',
+          score: 5
+        },
+        {
+          title: 'Angular',
+          score: 4
+        },
+        {
+          title: 'React',
+          score: 4
+        },
+        {
+          title: 'Node',
+          score: 4
+        }
       ]
     }
   }
