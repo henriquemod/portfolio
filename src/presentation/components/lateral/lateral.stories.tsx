@@ -1,5 +1,3 @@
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { Meta, StoryObj } from '@storybook/react'
 import * as React from 'react'
 import IconButton from '../icon-button'
@@ -7,28 +5,13 @@ import IconButton from '../icon-button'
 // import { expect } from '@storybook/jest'
 
 import Lateral from '.'
+import { IconType } from '@/domain/models/profile-data-model'
 
 const iconList = [
-  <IconButton
-    key={1}
-    icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-    href=""
-  />,
-  <IconButton
-    key={2}
-    icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-    href=""
-  />,
-  <IconButton
-    key={3}
-    icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-    href=""
-  />,
-  <IconButton
-    key={4}
-    icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-    href=""
-  />
+  <IconButton key={1} icon={IconType.Github} href="" />,
+  <IconButton key={2} icon={IconType.Github} href="" />,
+  <IconButton key={3} icon={IconType.Github} href="" />,
+  <IconButton key={4} icon={IconType.Github} href="" />
 ]
 
 const meta = {

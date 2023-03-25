@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type { Meta, StoryObj } from '@storybook/react'
-import * as React from 'react'
-import { within } from '@storybook/testing-library'
+import { IconType } from '@/domain/models/profile-data-model'
 import { expect } from '@storybook/jest'
+import type { Meta, StoryObj } from '@storybook/react'
+import { within } from '@storybook/testing-library'
 
 import IconButton from '.'
 
@@ -33,7 +31,7 @@ type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    icon: <FontAwesomeIcon size="2x" icon={faGithub} />,
+    icon: IconType.Github,
     href: 'http://google.com.br/'
   }
 }
@@ -52,7 +50,7 @@ Primary.play = async ({ canvasElement, step, args }) => {
 export const WithLabel: Story = {
   args: {
     label: 'Github',
-    icon: <FontAwesomeIcon size="2x" icon={faGithub} />,
+    icon: IconType.Github,
     href: 'http://google.com.br/',
     openNewPage: true
   }

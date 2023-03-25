@@ -1,4 +1,7 @@
-import { type ProfileDataModel } from '@/domain/models/profile-data-model'
+import {
+  IconType,
+  type ProfileDataModel
+} from '@/domain/models/profile-data-model'
 import { type GetProfileData } from '@/domain/usecases'
 import type { Meta, StoryObj } from '@storybook/react'
 
@@ -10,6 +13,7 @@ const avatarUrl =
 export class FakeFirebaseClient implements GetProfileData {
   async get(): Promise<ProfileDataModel> {
     return {
+      email: 'any_email',
       profileBannerData: {
         name: 'Bartolomeu',
         job: 'Java Sr. Developer',
@@ -53,6 +57,28 @@ export class FakeFirebaseClient implements GetProfileData {
         {
           title: 'Node',
           score: 4
+        }
+      ],
+      socialMediaData: [
+        {
+          icon: IconType.Github,
+          url: 'asd'
+        },
+        {
+          icon: IconType.LinkedIn,
+          url: 'asd'
+        },
+        {
+          icon: IconType.Github,
+          url: 'asd'
+        },
+        {
+          icon: IconType.Github,
+          url: 'asd'
+        },
+        {
+          icon: IconType.Github,
+          url: 'asd'
         }
       ]
     }

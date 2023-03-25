@@ -10,27 +10,37 @@ import Lateral from '@/presentation/components/lateral'
 import ProfileBanner from '@/presentation/components/profile-banner'
 import ChapterSkeleton from '@/presentation/components/skeletons/chapter'
 import ProfileSkeletonBanner from '@/presentation/components/skeletons/profile-banner'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react'
 import Styles from './styles.scss'
+
+const LEFT_LATERAL_STYLE: React.CSSProperties = {
+  position: 'absolute',
+  left: '-550px',
+  top: '-30px'
+}
+
+const RIGHT_LATERAL_STYLE: React.CSSProperties = {
+  position: 'absolute',
+  right: '60px',
+  top: '70px'
+}
 
 const options: IMenuItem[] = [
   {
     label: 'About',
-    url: '/'
+    url: '#bout-me-chapter'
   },
   {
     label: 'Skills',
-    url: '/'
+    url: '#my-skills-chapter'
   },
   {
     label: 'Portfolio',
-    url: '/'
+    url: '#my-portfolio-chapter'
   },
   {
     label: 'Career',
-    url: '/'
+    url: '#my-work-career-chapter'
   },
   {
     label: 'Contact',
@@ -60,50 +70,31 @@ const Home = (props: IProps): JSX.Element => {
     <div className={Styles.container}>
       <div className={Styles.headerContainer}>
         <div className={`${Styles.lateralContainer}`}>
-          <div className={Styles.sideBlock}>
-            <Lateral
-              rotateIcons
-              style={{
-                position: 'absolute',
-                left: '-550px',
-                top: '-30px'
-              }}
-              content={[
-                <IconButton
-                  key={1}
-                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-                  href=""
-                />,
-                <IconButton
-                  key={2}
-                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-                  href=""
-                />,
-                <IconButton
-                  key={3}
-                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-                  href=""
-                />,
-                <IconButton
-                  key={4}
-                  icon={<FontAwesomeIcon size="2x" icon={faGithub} />}
-                  href=""
-                />
-              ]}
-            />
-          </div>
+          {profileData && (
+            <div className={Styles.sideBlock}>
+              <Lateral
+                rotateIcons
+                style={LEFT_LATERAL_STYLE}
+                content={profileData.socialMediaData.map((social, i) => (
+                  <IconButton
+                    openNewPage
+                    key={i}
+                    icon={social.icon}
+                    href={social.url}
+                  />
+                ))}
+              />
+            </div>
+          )}
           <Header align="right" menuItens={options} />
-          <div className={Styles.sideBlock}>
-            <Lateral
-              style={{
-                position: 'absolute',
-                right: '60px',
-                top: '70px'
-              }}
-              className={Styles.lateralLeft}
-              content="beltrano@gmail.com"
-            />
-          </div>
+          {profileData && (
+            <div className={Styles.sideBlock}>
+              <Lateral
+                style={RIGHT_LATERAL_STYLE}
+                content={profileData.email}
+              />
+            </div>
+          )}
         </div>
       </div>
       <div className={Styles.row}>

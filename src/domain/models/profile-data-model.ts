@@ -12,7 +12,22 @@ export interface Skill {
   score: Score
 }
 
+export enum IconType {
+  Github = 'github',
+  LinkedIn = 'linkedin',
+  Facebook = 'facebook',
+  Instagram = 'instagram',
+  Youtube = 'youtube',
+  Twitter = 'twitter'
+}
+
+export interface SocialMedia {
+  icon: IconType
+  url: string
+}
+
 export type ProfileDataModel = {
+  email: string
   profileBannerData: {
     name: string
     job: string
@@ -22,4 +37,5 @@ export type ProfileDataModel = {
   aboutMe: string
   jobSignatures: JobSignature[]
   skillList: Skill[]
+  socialMediaData: SocialMedia[]
 }

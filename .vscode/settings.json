@@ -1,3 +1,9 @@
 {
-    "dotenv.enableAutocloaking": false
+    "dotenv.enableAutocloaking": false,
+    "cSpell.words": [
+        "facebook",
+        "instagram",
+        "linkedin",
+        "youtube"
+    ]
 }

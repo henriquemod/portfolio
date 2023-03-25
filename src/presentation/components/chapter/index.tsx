@@ -10,7 +10,10 @@ interface IProps {
 
 const Chapter = (props: IProps): JSX.Element => {
   return (
-    <div className={Styles.container}>
+    <div
+      className={Styles.container}
+      id={`${props.title.trim().replaceAll(' ', '-').toLowerCase()}-chapter`}
+    >
       <div className={Styles.header}>
         <span>{`${props.id.toString().padStart(2, '0')}.`}</span>
         <h2>{`<${props.title}>`}</h2>

@@ -27,6 +27,7 @@ describe('RemoteAuthentication', () => {
     const { sut } = makeSut()
     const data = await sut.get('any_path')
     expect(data).toEqual({
+      email: 'any_email',
       profileBannerData: {
         avatarUrl: 'any_avatar_url',
         job: 'any_job',
@@ -35,7 +36,8 @@ describe('RemoteAuthentication', () => {
       },
       aboutMe: 'any_about_me',
       jobSignatures: [],
-      skillList: []
+      skillList: [],
+      socialMediaData: []
     })
   })
 })
