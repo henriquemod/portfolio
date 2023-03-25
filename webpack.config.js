@@ -12,7 +12,13 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      '@': path.join(__dirname, 'src')
+      '@': path.join(__dirname, 'src'),
+      '@mui/base': '@mui/base/legacy',
+      '@mui/lab': '@mui/lab/legacy',
+      '@mui/material': '@mui/material/legacy',
+      '@mui/styled-engine': '@mui/styled-engine/legacy',
+      '@mui/system': '@mui/system/legacy',
+      '@mui/utils': '@mui/utils/legacy'
     }
   },
   module: {

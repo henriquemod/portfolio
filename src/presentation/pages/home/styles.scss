@@ -10,6 +10,7 @@ $breakpoint: 992px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 .grid {
   display: grid;
@@ -23,7 +24,6 @@ $breakpoint: 992px;
   position: relative;
   display: flex;
   flex-direction: row;
-  margin-bottom: 3rem;
 }
 
 .sideBlock {
@@ -31,7 +31,7 @@ $breakpoint: 992px;
 }
 
 .headerContainer {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: $breakpoint) {

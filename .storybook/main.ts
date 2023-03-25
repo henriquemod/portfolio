@@ -37,7 +37,13 @@ config.webpackFinal = async (config) => {
   if (config.resolve) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(__dirname, '../src/')
+      '@': path.resolve(__dirname, '../src/'),
+      '@mui/base': '@mui/base/legacy',
+      '@mui/lab': '@mui/lab/legacy',
+      '@mui/material': '@mui/material/legacy',
+      '@mui/styled-engine': '@mui/styled-engine/legacy',
+      '@mui/system': '@mui/system/legacy',
+      '@mui/utils': '@mui/utils/legacy'
     }
   }
   config.module?.rules?.push({

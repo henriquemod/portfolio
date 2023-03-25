@@ -1,7 +1,9 @@
 @import '../../styles/colors.scss';
 
+$maxWidth: 992px;
+
 .container {
-  max-width: 992px;
+  max-width: $maxWidth;
   min-width: 100%;
 }
 

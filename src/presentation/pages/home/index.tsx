@@ -1,5 +1,5 @@
 import { type ProfileDataModel } from '@/domain/models/profile-data-model'
-import { type FirebaseClient } from '@/infra/firebase/firebase-get-data'
+import { type GetProfileData } from '@/domain/usecases'
 import Board from '@/presentation/components/board'
 import Card from '@/presentation/components/card'
 import Chapter from '@/presentation/components/chapter'
@@ -8,6 +8,7 @@ import IconButton from '@/presentation/components/icon-button'
 import JobSignature from '@/presentation/components/job-signature'
 import Lateral from '@/presentation/components/lateral'
 import ProfileBanner from '@/presentation/components/profile-banner'
+import ProfileSkeletonBanner from '@/presentation/components/skeletons/profile-banner'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react'
@@ -37,16 +38,18 @@ const options: IMenuItem[] = [
 ]
 
 interface IProps {
-  firebaseClient: FirebaseClient
+  firebaseClient: GetProfileData
 }
 
 const Home = (props: IProps): JSX.Element => {
+  const [loading, setLoading] = React.useState<boolean>(true)
   const [profileData, setProfileData] = React.useState<ProfileDataModel>()
 
   React.useEffect(() => {
     async function loadProfile(): Promise<void> {
       const profile = await props.firebaseClient.get('profileData')
       setProfileData(profile)
+      setLoading(false)
     }
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     loadProfile()
@@ -55,17 +58,14 @@ const Home = (props: IProps): JSX.Element => {
   return (
     <div className={Styles.container}>
       <div className={Styles.headerContainer}>
-        <Header align="right" menuItens={options} />
-      </div>
-      {profileData && (
         <div className={`${Styles.lateralContainer}`}>
           <div className={Styles.sideBlock}>
             <Lateral
               rotateIcons
               style={{
                 position: 'absolute',
-                left: '-250px',
-                top: '140px'
+                left: '-550px',
+                top: '-30px'
               }}
               content={[
                 <IconButton
@@ -91,6 +91,24 @@ const Home = (props: IProps): JSX.Element => {
               ]}
             />
           </div>
+          <Header align="right" menuItens={options} />
+          <div className={Styles.sideBlock}>
+            <Lateral
+              style={{
+                position: 'absolute',
+                right: '60px',
+                top: '70px'
+              }}
+              className={Styles.lateralLeft}
+              content="beltrano@gmail.com"
+            />
+          </div>
+        </div>
+      </div>
+      <div className={Styles.row}>
+        {loading || !profileData ? (
+          <ProfileSkeletonBanner />
+        ) : (
           <ProfileBanner
             avatarUrl={profileData.profileBannerData.avatarUrl}
             handleContactClick={() => {}}
@@ -98,19 +116,8 @@ const Home = (props: IProps): JSX.Element => {
             job={profileData.profileBannerData.job}
             message={profileData.profileBannerData.message}
           />
-          <div className={Styles.sideBlock}>
-            <Lateral
-              style={{
-                position: 'absolute',
-                right: '-235px',
-                top: '280px'
-              }}
-              className={Styles.lateralLeft}
-              content="beltrano@gmail.com"
-            />
-          </div>
-        </div>
-      )}
+        )}
+      </div>
       <div className={Styles.row}>
         <Chapter
           title="About me"
