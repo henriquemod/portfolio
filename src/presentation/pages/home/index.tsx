@@ -8,6 +8,7 @@ import IconButton from '@/presentation/components/icon-button'
 import JobSignature from '@/presentation/components/job-signature'
 import Lateral from '@/presentation/components/lateral'
 import ProfileBanner from '@/presentation/components/profile-banner'
+import ChapterSkeleton from '@/presentation/components/skeletons/chapter'
 import ProfileSkeletonBanner from '@/presentation/components/skeletons/profile-banner'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -118,13 +119,15 @@ const Home = (props: IProps): JSX.Element => {
           />
         )}
       </div>
-      <div className={Styles.row}>
-        <Chapter
-          title="About me"
-          description="I am a Java Developer with 10 years of experience in the IT area. I have worked with several technologies, such as Java, Spring, Angular, React, Node, AWS, and others. I am passionate about technology and I am always looking for new challenges and opportunities to learn and grow professionally."
-          id={1}
-        />
-      </div>
+
+      {loading ? (
+        <ChapterSkeleton id="1" title="About me" />
+      ) : (
+        <div className={Styles.row}>
+          <Chapter title="About me" description={profileData?.aboutMe} id={1} />
+        </div>
+      )}
+
       <Chapter
         title="My Skills"
         description="I little bit about my skills and what I can do for you."

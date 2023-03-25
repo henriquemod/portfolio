@@ -12,5 +12,6 @@ export type ProfileDataModel = {
     avatarUrl: string
     message: string
   }
+  aboutMe: string
   jobSignatures: JobSignature[]
 }

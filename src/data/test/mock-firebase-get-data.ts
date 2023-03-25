@@ -12,6 +12,7 @@ export class FirebaseGetDataSpy implements FirebaseGetDataClient {
         avatarUrl: 'any_avatar_url',
         message: 'any_message'
       },
+      aboutMe: 'any_about_me',
       jobSignatures: []
     })
   }

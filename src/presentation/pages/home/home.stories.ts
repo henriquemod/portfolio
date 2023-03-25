@@ -17,6 +17,8 @@ export class FakeFirebaseClient implements GetProfileData {
         message:
           'With hard work, determination, and a positive mindset, you can achieve anything you set your mind to'
       },
+      aboutMe:
+        'I am a Java Developer with 10 years of experience in the IT area. I have worked with several technologies, such as Java, Spring, Angular, React, Node, AWS, and others. I am passionate about technology and I am always looking for new challenges and opportunities to learn and grow professionally.',
       jobSignatures: [
         {
           id: '1',
