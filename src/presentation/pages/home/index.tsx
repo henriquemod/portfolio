@@ -66,94 +66,105 @@ const Home = (props: IProps): JSX.Element => {
     loadProfile()
   }, [])
 
-  return (
-    <div className={Styles.container}>
-      <div className={Styles.headerContainer}>
-        <div className={`${Styles.lateralContainer}`}>
-          {profileData && (
-            <div className={Styles.sideBlock}>
-              <Lateral
-                rotateIcons
-                style={LEFT_LATERAL_STYLE}
-                content={profileData.socialMediaData.map((social, i) => (
-                  <IconButton
-                    openNewPage
-                    key={i}
-                    icon={social.icon}
-                    href={social.url}
-                  />
-                ))}
-              />
-            </div>
-          )}
-          <Header align="right" menuItens={options} />
-          {profileData && (
-            <div className={Styles.sideBlock}>
-              <Lateral
-                style={RIGHT_LATERAL_STYLE}
-                content={profileData.email}
-              />
-            </div>
-          )}
-        </div>
+  const ProfileBannerComponent = React.useCallback(() => {
+    return loading || !profileData ? (
+      <ProfileSkeletonBanner />
+    ) : (
+      <ProfileBanner
+        avatarUrl={profileData.profileBannerData.avatarUrl}
+        handleContactClick={() => {}}
+        name={profileData.profileBannerData.name}
+        job={profileData.profileBannerData.job}
+        message={profileData.profileBannerData.message}
+      />
+    )
+  }, [loading, profileData])
+
+  const LateralLeft = React.useCallback(() => {
+    return profileData ? (
+      <div className={Styles.sideBlock}>
+        <Lateral
+          rotateIcons
+          style={LEFT_LATERAL_STYLE}
+          content={profileData.socialMediaData.map((social, i) => (
+            <IconButton
+              openNewPage
+              key={i}
+              icon={social.icon}
+              href={social.url}
+            />
+          ))}
+        />
       </div>
+    ) : (
+      <></>
+    )
+  }, [profileData])
+
+  const LateralRight = React.useCallback(() => {
+    return profileData ? (
+      <div className={Styles.sideBlock}>
+        <Lateral style={RIGHT_LATERAL_STYLE} content={profileData.email} />
+      </div>
+    ) : (
+      <></>
+    )
+  }, [profileData])
+
+  const AboutMe = React.useCallback(() => {
+    return loading ? (
+      <ChapterSkeleton id="1" title="About me" />
+    ) : (
       <div className={Styles.row}>
-        {loading || !profileData ? (
-          <ProfileSkeletonBanner />
-        ) : (
-          <ProfileBanner
-            avatarUrl={profileData.profileBannerData.avatarUrl}
-            handleContactClick={() => {}}
-            name={profileData.profileBannerData.name}
-            job={profileData.profileBannerData.job}
-            message={profileData.profileBannerData.message}
-          />
-        )}
+        <Chapter title="About me" description={profileData?.aboutMe} id={1} />
       </div>
+    )
+  }, [loading, profileData])
 
-      {loading ? (
-        <ChapterSkeleton id="1" title="About me" />
-      ) : (
+  const MySkills = React.useCallback(() => {
+    return loading ? (
+      <ChapterSkeleton id="2" title="My Skills" />
+    ) : (
+      <Chapter
+        id={2}
+        title="My Skills"
+        description="I little bit about my skills and what I can do for you."
+      >
         <div className={Styles.row}>
-          <Chapter title="About me" description={profileData?.aboutMe} id={1} />
+          <Board skills={profileData?.skillList ?? []} />
         </div>
-      )}
+      </Chapter>
+    )
+  }, [loading, profileData])
 
-      {loading ? (
-        <ChapterSkeleton id="2" title="My Skills" />
-      ) : (
-        <Chapter
-          id={2}
-          title="My Skills"
-          description="I little bit about my skills and what I can do for you."
-        >
-          <div className={Styles.row}>
-            <Board skills={profileData?.skillList ?? []} />
-          </div>
-        </Chapter>
-      )}
+  const MyPortfolio = React.useCallback(() => {
+    return loading ? (
+      <ChapterSkeleton id="3" title="My Portfolio" />
+    ) : (
+      <Chapter
+        title="My Portfolio"
+        description="Some of my projects and works."
+        id={3}
+      >
+        <div className={`${Styles.row} ${Styles.grid}`}>
+          {profileData?.projects.map((portfolio, i) => (
+            <Card
+              key={i}
+              title={portfolio.title}
+              message={portfolio.message}
+              tags={portfolio.tags}
+              actions={portfolio.actions}
+            />
+          ))}
+        </div>
+      </Chapter>
+    )
+  }, [loading, profileData])
 
-      {loading ? (
-        <ChapterSkeleton id="3" title="My Portfolio" />
-      ) : (
-        <Chapter
-          title="My Portfolio"
-          description="Some of my projects and works."
-          id={3}
-        >
-          <div className={`${Styles.row} ${Styles.grid}`}>
-            {profileData?.projects.map((portfolio, i) => (
-              <Card
-                key={i}
-                title={portfolio.title}
-                message={portfolio.message}
-                tags={portfolio.tags}
-                actions={portfolio.actions}
-              />
-            ))}
-          </div>
-        </Chapter>
-      )}
+  const MyWorkCareer = React.useCallback(() => {
+    return loading ? (
+      <ChapterSkeleton id="4" title="My Work Career" />
+    ) : (
       <Chapter id={4} title="My Work Career">
         {profileData?.jobSignatures.map((jobSignature) => (
           <JobSignature
@@ -164,6 +175,25 @@ const Home = (props: IProps): JSX.Element => {
           />
         ))}
       </Chapter>
+    )
+  }, [loading, profileData])
+
+  return (
+    <div className={Styles.container}>
+      <div className={Styles.headerContainer}>
+        <div className={`${Styles.lateralContainer}`}>
+          <LateralLeft />
+          <Header align="right" menuItens={options} />
+          <LateralRight />
+        </div>
+      </div>
+      <div className={Styles.row}>
+        <ProfileBannerComponent />
+      </div>
+      <AboutMe />
+      <MySkills />
+      <MyPortfolio />
+      <MyWorkCareer />
     </div>
   )
 }
