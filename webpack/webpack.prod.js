@@ -1,8 +1,19 @@
 const path = require('path')
-const Dotenv = require('dotenv-webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const webpack = require('webpack')
+
+const ENVS = {
+  FIREBASE_API_KEY: process.env.FIREBASE_API_KEY || '',
+  FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN || '',
+  FIREBASE_DB_URL: process.env.FIREBASE_DB_URL || '',
+  FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID || '',
+  FIREBASE_STORAGE_BUCKET: process.env.FIREBASE_STORAGE_BUCKET || '',
+  FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID || '',
+  FIREBASE_APP_ID: process.env.FIREBASE_APP_ID || '',
+  FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID || ''
+}
 
 module.exports = {
   mode: 'production',
@@ -56,10 +67,10 @@ module.exports = {
     minimizer: [new TerserPlugin()]
   },
   plugins: [
-    new Dotenv(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '../css/style.css'
-    })
+    }),
+    new webpack.EnvironmentPlugin(ENVS)
   ]
 }
