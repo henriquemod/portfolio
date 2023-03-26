@@ -1,6 +1,7 @@
 node_modules
 dist
 public/js/*
+public/css/*
 yarn-error.log
 coverage
 .env
