@@ -5,3 +5,4 @@ public/css/*
 yarn-error.log
 coverage
 .env
+storybook-static

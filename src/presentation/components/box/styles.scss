@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-inline: auto;
 }
 
 .auto {
@@ -42,6 +43,9 @@
 }
 
 @media (min-width: $bp-large) {
+  .container {
+    margin-bottom: 2.5rem;
+  }
   .auto {
     width: 700px;
   }

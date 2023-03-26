@@ -18,11 +18,12 @@ interface IProps {
   tags: string[]
   actions?: Action[]
   id?: string
+  mb?: 1 | 2 | 3 | 4
 }
 
 const Card = (props: IProps): JSX.Element => {
   return (
-    <Box size="card" id={props.id}>
+    <Box size="card" id={props.id} mb={props.mb}>
       <div className={Styles.header}>
         <FontAwesomeIcon
           size="2x"
