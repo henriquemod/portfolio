@@ -115,9 +115,7 @@ const Home = (props: IProps): JSX.Element => {
     return loading ? (
       <ChapterSkeleton id="1" title="About me" />
     ) : (
-      <div className={Styles.row}>
-        <Chapter title="About me" description={profileData?.aboutMe} id={1} />
-      </div>
+      <Chapter title="About me" description={profileData?.aboutMe} id={1} />
     )
   }, [loading, profileData])
 

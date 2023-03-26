@@ -5,9 +5,14 @@
   min-width: $bp-small;
   margin-left: auto;
   margin-right: auto;
+  padding: 3rem;
 }
 
 .sideBlock {
+  display: none;
+}
+
+.headerContainer {
   display: none;
 }
 
@@ -40,11 +45,22 @@
 }
 
 @media (min-width: $bp-medium) {
+  .headerContainer {
+    display: block;
+  }
+
+  .container {
+    padding: 0 3rem 0 3rem;
+  }
 }
 
 @media (min-width: $bp-large) {
   .sideBlock {
     display: block;
+  }
+
+  .container {
+    padding: 0;
   }
 }
 

@@ -1,5 +1,6 @@
 @import '../../styles/colors.scss';
 @import '../../styles/breakpoints.scss';
+@import '../../styles/typography.scss';
 
 .container {
   max-width: $bp-large;
@@ -8,19 +9,22 @@
 
 .top {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
+  align-items: center;
+  text-align: center;
 }
 
 .title {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  line-height: 5rem;
+  line-height: 2.5rem;
   & h2,
   h3,
   span {
     font-weight: bold;
-    font-size: 4rem;
+    font-size: $large-font-size;
     letter-spacing: -0.2rem;
   }
 }
@@ -34,6 +38,7 @@
 }
 
 .profileBlock {
+  display: none;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -45,6 +50,7 @@
 
 .profilePic {
   position: relative;
+  margin-bottom: 1.5rem;
   & img {
     position: absolute;
     position: sticky;
@@ -55,10 +61,63 @@
 }
 
 .bottom {
+  display: flex;
+  flex-direction: column;
   margin-top: 3rem;
 
   & p {
-    font-size: 2rem;
+    font-size: $small-font-size;
     margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: $bp-medium) {
+  .top {
+    flex-direction: row;
+    align-items: end;
+    text-align: start;
+  }
+  .profileBlock {
+    display: block;
+  }
+  .title {
+    line-height: 3rem;
+    & h2,
+    h3,
+    span {
+      font-size: $large-font-size;
+    }
+  }
+
+  .bottom {
+    & p {
+      font-size: $medium-font-size;
+    }
+  }
+
+  .bottom {
+    display: block;
+    padding: 0;
+
+    & p {
+      font-size: $medium-font-size;
+    }
+  }
+}
+
+@media (min-width: $bp-large) {
+  .title {
+    line-height: 5rem;
+    & h2,
+    h3,
+    span {
+      font-size: $title-font-size;
+    }
+  }
+
+  .bottom {
+    & p {
+      font-size: $large-font-size;
+    }
   }
 }
