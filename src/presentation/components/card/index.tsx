@@ -17,11 +17,12 @@ interface IProps {
   message: string
   tags: string[]
   actions?: Action[]
+  id?: string
 }
 
 const Card = (props: IProps): JSX.Element => {
   return (
-    <Box size="medium">
+    <Box size="card" id={props.id}>
       <div className={Styles.header}>
         <FontAwesomeIcon
           size="2x"

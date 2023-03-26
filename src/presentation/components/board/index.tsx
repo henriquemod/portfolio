@@ -9,7 +9,7 @@ interface IProps {
 
 const Board = (props: IProps): JSX.Element => {
   return (
-    <Box size="large">
+    <Box size="auto">
       {props.skills?.map((skill, i) => (
         <SkillLevel key={i} label={skill.title} score={skill.score} />
       ))}

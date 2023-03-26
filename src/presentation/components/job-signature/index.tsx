@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const Divisor = (): JSX.Element => {
-  return <span>@</span>
+  return <span className={Styles.divisor}>@</span>
 }
 
 const JobSignature = (props: IProps): JSX.Element => {
@@ -18,7 +18,7 @@ const JobSignature = (props: IProps): JSX.Element => {
       <Divisor />
       <div className={Styles.rightContainer}>
         <p>{props.companyName}</p>
-        <span className={Styles.periodDivisor}> - </span>
+        <span className={Styles.periodDivisor}>-</span>
         <p>{props.period}</p>
       </div>
     </div>

@@ -1,37 +1,95 @@
 @import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
+@import '../../styles/typography.scss';
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.75rem;
-    max-width: 768px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  max-width: $bp-medium;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .skill {
-    & h2 {
-        font-size: 2rem;
-        font-weight: 400;
-    }
+  margin-bottom: 0.5rem;
+  & h2 {
+    font-size: $small-font-size;
+    font-weight: 400;
+  }
 }
 
 .rank {
-    display: flex;
-    & div {
-        margin-left: .5rem;
-    }
+  display: flex;
+  & div {
+    margin-left: 0.25rem;
+  }
 }
 
 .block {
-    width: 4rem;
-    height: 2.75rem;
-    background-color: $main100;
-    border-radius: 5px;
+  width: 2rem;
+  height: 1.75rem;
+  background-color: $main100;
+  border-radius: 5px;
 }
 
 .colorNone {
-    background-color: $gray50;
+  background-color: $gray50;
+}
+
+@media (max-width: $bp-small) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $bp-small) {
+  .container {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $bp-medium) {
+  .container {
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+
+  .skill {
+    & h2 {
+      font-size: $medium-font-size;
+    }
+  }
+
+  .block {
+    width: 2.75rem;
+    height: 2rem;
+  }
+
+  .rank {
+    & div {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: $bp-large) {
+  .skill {
+    & h2 {
+      font-size: $large-font-size;
+    }
+  }
+
+  .container {
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+
+  .block {
+    width: 4rem;
+    height: 2.75rem;
+  }
 }

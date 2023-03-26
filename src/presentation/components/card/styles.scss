@@ -1,62 +1,72 @@
 @import '../../styles/colors.scss';
-
-.container {
-    border-radius: 25px;
-    width: 480px;
-    height: 350px;
-    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.4);
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-} 
+@import '../../styles/breakpoints.scss';
+@import '../../styles/typography.scss';
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .actions {
-    & a {
-        text-decoration: none;
-        color: black;
-        margin-left: 1.25rem;
-    }
+  & a {
+    text-decoration: none;
+    color: $dark;
+    margin-left: 1.25rem;
+  }
 }
 
 .content {
-    min-height: 14rem;
-    max-height: 14rem;
-    overflow: hidden;
-    flex: 1;
-    margin-bottom: 2rem;
-    & h1 {
-        font-size: 2.75rem;
-        margin-bottom: 1rem;
-        color: $gray100;
-    }
+  overflow: hidden;
+  flex: 1;
+  margin-bottom: 2rem;
+  & h1 {
+    font-size: $medium-font-size;
+    margin-bottom: 1rem;
+    color: $gray100;
+  }
 
-    & p {
-        font-size: 1.5rem;
-        line-height: 2.25rem;
-        color: $gray100;
-    }
+  & p {
+    font-size: $extra-small-font-size;
+    line-height: 1.5rem;
+    color: $gray100;
+  }
 }
 
 .tags {
+  & span {
+    line-height: 3rem;
+  }
+}
+
+.cardIcon {
+  color: $main100;
+}
+
+@media (min-width: $bp-medium) {
+  .tags {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 
     & span {
-        margin-right: 1rem;
+      margin-right: 1rem;
     }
+  }
 }
 
-.cardIcon {
-    color: $main100;
+@media (min-width: $bp-large) {
+  .content {
+    & h1 {
+      font-size: $medium-font-size;
+    }
+    & p {
+      line-height: 2.5rem;
+      font-size: $small-font-size;
+    }
+  }
 }

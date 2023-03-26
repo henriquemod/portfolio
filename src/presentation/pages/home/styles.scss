@@ -2,10 +2,10 @@
 
 .container {
   max-width: $bp-large;
-  min-width: $bp-small;
   margin-left: auto;
   margin-right: auto;
   padding: 3rem;
+  margin-bottom: 8rem;
 }
 
 .sideBlock {
@@ -25,7 +25,7 @@
 .grid {
   display: grid;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   grid-gap: 20px;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -67,5 +67,9 @@
 @media (max-width: $bp-large) {
   .grid {
     grid-template-columns: 1fr;
+
+    & > div {
+      margin-bottom: 2rem;
+    }
   }
 }
