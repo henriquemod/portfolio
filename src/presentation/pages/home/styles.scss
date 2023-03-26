@@ -1,9 +1,14 @@
-$breakpoint: 992px;
+@import '../../styles/breakpoints.scss';
 
 .container {
-  max-width: $breakpoint;
+  max-width: $bp-large;
+  min-width: $bp-small;
   margin-left: auto;
   margin-right: auto;
+}
+
+.sideBlock {
+  display: none;
 }
 
 .row {
@@ -34,7 +39,16 @@ $breakpoint: 992px;
   margin-bottom: 2rem;
 }
 
-@media (max-width: $breakpoint) {
+@media (min-width: $bp-medium) {
+}
+
+@media (min-width: $bp-large) {
+  .sideBlock {
+    display: block;
+  }
+}
+
+@media (max-width: $bp-large) {
   .grid {
     grid-template-columns: 1fr;
   }

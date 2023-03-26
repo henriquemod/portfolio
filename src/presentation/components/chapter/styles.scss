@@ -1,12 +1,15 @@
 @import '../../styles/colors.scss';
+@import '../../styles/breakpoints.scss';
+@import '../../styles/typography.scss';
 
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 992px;
+  max-width: $bp-large;
+  min-width: $bp-small;
 
   & h2 {
-    font-size: 2.75rem;
+    font-size: $small-font-size;
     font-weight: 700;
   }
 }
@@ -53,4 +56,20 @@
   width: 100%;
 
   padding-top: 1rem;
+}
+
+@media (min-width: $bp-medium) {
+  .container {
+    & h2 {
+      font-size: $medium-font-size;
+    }
+  }
+}
+
+@media (min-width: $bp-large) {
+  .container {
+    & h2 {
+      font-size: $large-font-size;
+    }
+  }
 }

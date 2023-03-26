@@ -1,9 +1,8 @@
 @import '../../styles/colors.scss';
-
-$maxWidth: 992px;
+@import '../../styles/breakpoints.scss';
 
 .container {
-  max-width: $maxWidth;
+  max-width: $bp-large;
   min-width: 100%;
 }
 

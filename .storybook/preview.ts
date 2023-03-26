@@ -15,6 +15,27 @@ const customViewports = {
       width: '1920px',
       height: '900px'
     }
+  },
+  bp992: {
+    name: 'bp992',
+    styles: {
+      width: '992px',
+      height: '963px'
+    }
+  },
+  bp768: {
+    name: 'bp768',
+    styles: {
+      width: '768px',
+      height: '963px'
+    }
+  },
+  bp576: {
+    name: 'bp576',
+    styles: {
+      width: '576px',
+      height: '963px'
+    }
   }
 }
 

@@ -1,9 +1,10 @@
 @import '../../../styles/colors.scss';
+@import '../../../styles/breakpoints.scss';
 
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 992px;
+  max-width: $bp-large;
 
   & h2 {
     font-size: 2.75rem;
