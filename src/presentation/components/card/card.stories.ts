@@ -1,18 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { within } from '@storybook/testing-library'
 import { expect } from '@storybook/jest'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 import Card, { type Action } from '.'
+import { IconType } from '@/domain/models/profile-data-model'
 
 const actionList: Action[] = [
   {
-    icon: faGithub,
+    icon: IconType.Github,
     url: '#'
   },
   {
-    icon: faArrowUpRightFromSquare,
+    icon: IconType.ArrowUpRightFromSquare,
     url: '#'
   }
 ]

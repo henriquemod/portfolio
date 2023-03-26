@@ -133,38 +133,27 @@ const Home = (props: IProps): JSX.Element => {
         </Chapter>
       )}
 
-      <Chapter
-        title="My Portfolio"
-        description="Some of my projects and works."
-        id={3}
-      >
-        <div className={`${Styles.row} ${Styles.grid}`}>
-          <Card
-            title='Project "X"'
-            message='Description of project "X"'
-            tags={[]}
-            actions={[]}
-          />
-          <Card
-            title='Project "X"'
-            message='Description of project "X"'
-            tags={[]}
-            actions={[]}
-          />
-          <Card
-            title='Project "X"'
-            message='Description of project "X"'
-            tags={[]}
-            actions={[]}
-          />
-          <Card
-            title='Project "X"'
-            message='Description of project "X"'
-            tags={[]}
-            actions={[]}
-          />
-        </div>
-      </Chapter>
+      {loading ? (
+        <ChapterSkeleton id="3" title="My Portfolio" />
+      ) : (
+        <Chapter
+          title="My Portfolio"
+          description="Some of my projects and works."
+          id={3}
+        >
+          <div className={`${Styles.row} ${Styles.grid}`}>
+            {profileData?.projects.map((portfolio, i) => (
+              <Card
+                key={i}
+                title={portfolio.title}
+                message={portfolio.message}
+                tags={portfolio.tags}
+                actions={portfolio.actions}
+              />
+            ))}
+          </div>
+        </Chapter>
+      )}
       <Chapter id={4} title="My Work Career">
         {profileData?.jobSignatures.map((jobSignature) => (
           <JobSignature

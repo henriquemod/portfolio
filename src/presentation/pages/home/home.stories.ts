@@ -80,6 +80,68 @@ export class FakeFirebaseClient implements GetProfileData {
           icon: IconType.Github,
           url: 'asd'
         }
+      ],
+      projects: [
+        {
+          title: 'Project 1',
+          message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          tags: ['tag1', 'tag2', 'tag3'],
+          actions: [
+            {
+              icon: IconType.Github,
+              url: '#'
+            },
+            {
+              icon: IconType.ArrowUpRightFromSquare,
+              url: '#'
+            }
+          ]
+        },
+        {
+          title: 'Project 2',
+          message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          tags: ['tag1', 'tag2', 'tag3'],
+          actions: [
+            {
+              icon: IconType.Github,
+              url: '#'
+            },
+            {
+              icon: IconType.ArrowUpRightFromSquare,
+              url: '#'
+            }
+          ]
+        },
+        {
+          title: 'Project 3',
+          message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          tags: ['tag1', 'tag2', 'tag3'],
+          actions: [
+            {
+              icon: IconType.Github,
+              url: '#'
+            },
+            {
+              icon: IconType.ArrowUpRightFromSquare,
+              url: '#'
+            }
+          ]
+        },
+        {
+          title: 'Project 4',
+          message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          tags: ['tag1', 'tag2', 'tag3'],
+          actions: [
+            {
+              icon: IconType.Github,
+              url: '#'
+            },
+            {
+              icon: IconType.ArrowUpRightFromSquare,
+              url: '#'
+            }
+          ]
+        }
       ]
     }
   }

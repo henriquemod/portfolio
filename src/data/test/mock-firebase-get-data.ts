@@ -16,7 +16,8 @@ export class FirebaseGetDataSpy implements FirebaseGetDataClient {
       aboutMe: 'any_about_me',
       jobSignatures: [],
       skillList: [],
-      socialMediaData: []
+      socialMediaData: [],
+      projects: []
     })
   }
 }

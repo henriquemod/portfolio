@@ -1,16 +1,15 @@
-import {
-  faFolder,
-  type IconDefinition
-} from '@fortawesome/free-regular-svg-icons'
+import { type IconType } from '@/domain/models/profile-data-model'
+import { getIcon } from '@/presentation/utils/fa-icons'
+import { faFolder } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as React from 'react'
+import Box from '../box'
 import Tag from '../tag'
 import Styles from './styles.scss'
-import Box from '../box'
 
 export type Action = {
   url: string
-  icon: IconDefinition
+  icon: IconType
 }
 
 interface IProps {
@@ -31,8 +30,8 @@ const Card = (props: IProps): JSX.Element => {
         />
         <div className={Styles.actions}>
           {props.actions?.map((action, i) => (
-            <a key={i} href="">
-              <FontAwesomeIcon size="xl" icon={action.icon} />
+            <a key={i} href={action.url} target="_blank" rel="noreferrer">
+              <FontAwesomeIcon size="xl" icon={getIcon(action.icon)} />
             </a>
           ))}
         </div>

@@ -12,13 +12,26 @@ export interface Skill {
   score: Score
 }
 
+export type Action = {
+  url: string
+  icon: IconType
+}
+
 export enum IconType {
   Github = 'github',
   LinkedIn = 'linkedin',
   Facebook = 'facebook',
   Instagram = 'instagram',
   Youtube = 'youtube',
-  Twitter = 'twitter'
+  Twitter = 'twitter',
+  ArrowUpRightFromSquare = 'arrow-up-right-from-square'
+}
+
+export interface Project {
+  title: string
+  message: string
+  tags: string[]
+  actions: Action[]
 }
 
 export interface SocialMedia {
@@ -38,4 +51,5 @@ export type ProfileDataModel = {
   jobSignatures: JobSignature[]
   skillList: Skill[]
   socialMediaData: SocialMedia[]
+  projects: Project[]
 }
