@@ -1,13 +1,14 @@
 @import '../../styles/colors.scss';
 @import '../../styles/breakpoints.scss';
 @import '../../styles/typography.scss';
+@import '../../styles/spacings.scss';
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0;
+  margin-bottom: $small-space;
 
   & h3 {
     font-size: $small-font-size;
@@ -38,6 +39,19 @@
 .divisor {
   display: none;
   margin: 0 1rem;
+}
+
+@media (min-width: $bp-small) {
+  .container {
+    & span {
+      font-size: $medium-font-size;
+    }
+
+    & h3,
+    p {
+      font-size: $medium-font-size;
+    }
+  }
 }
 
 @media (min-width: $bp-medium) {
