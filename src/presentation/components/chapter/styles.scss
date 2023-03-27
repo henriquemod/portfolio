@@ -1,12 +1,13 @@
 @import '../../styles/colors.scss';
 @import '../../styles/breakpoints.scss';
 @import '../../styles/typography.scss';
+@import '../../styles/spacings.scss';
 
 .container {
   display: flex;
   flex-direction: column;
   max-width: $bp-large;
-  margin-bottom: 2rem;
+  flex: 1;
 
   & h2 {
     font-size: $small-font-size;
@@ -19,10 +20,10 @@
   flex-direction: row;
   justify-content: start;
   align-items: baseline;
-  margin-bottom: 1rem;
+  margin-bottom: $small-space;
 
   & span {
-    font-size: 2rem;
+    font-size: $large-font-size;
     font-weight: 400;
 
     color: $main100;
@@ -39,17 +40,13 @@
 
   & p {
     font-size: $small-font-size;
-    margin: 1rem 0;
-  }
-
-  & .children {
-    margin-bottom: 2rem;
+    margin: $small-space 0;
   }
 }
 
 .footer {
   align-self: flex-end;
-  padding-top: 1rem;
+  padding-top: $small-space;
 
   & h2 {
     color: $gray75;
@@ -58,9 +55,8 @@
 
 .children {
   align-self: center;
-  width: 100%;
-
-  padding-top: 1rem;
+  justify-self: center;
+  margin-block: $medium-space;
 }
 
 @media (min-width: $bp-medium) {
@@ -73,7 +69,7 @@
   .content {
     & p {
       font-size: $medium-font-size;
-      margin: 2rem 0;
+      margin: $medium-space 0;
     }
   }
 }

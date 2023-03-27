@@ -128,9 +128,7 @@ const Home = (props: IProps): JSX.Element => {
         title="My Skills"
         description="I little bit about my skills and what I can do for you."
       >
-        <div className={Styles.row}>
-          <Board skills={profileData?.skillList ?? []} />
-        </div>
+        <Board skills={profileData?.skillList ?? []} />
       </Chapter>
     )
   }, [loading, profileData])
@@ -144,7 +142,7 @@ const Home = (props: IProps): JSX.Element => {
         description="Some of my projects and works."
         id={3}
       >
-        <div className={`${Styles.row} ${Styles.grid}`}>
+        <div className={Styles.grid}>
           {profileData?.projects.map((portfolio, i) => (
             <Card
               key={i}
@@ -188,10 +186,18 @@ const Home = (props: IProps): JSX.Element => {
       <div className={Styles.row}>
         <ProfileBannerComponent />
       </div>
-      <AboutMe />
-      <MySkills />
-      <MyPortfolio />
-      <MyWorkCareer />
+      <div className={Styles.row}>
+        <AboutMe />
+      </div>
+      <div className={Styles.row}>
+        <MySkills />
+      </div>
+      <div className={Styles.row}>
+        <MyPortfolio />
+      </div>
+      <div className={Styles.row}>
+        <MyWorkCareer />
+      </div>
     </div>
   )
 }

@@ -1,10 +1,11 @@
 @import '../../styles/breakpoints.scss';
+@import '../../styles/spacings.scss';
 
 .container {
   max-width: $bp-large;
   margin-left: auto;
   margin-right: auto;
-  padding: 3rem;
+  padding: $large-space;
   margin-bottom: 8rem;
 }
 
@@ -20,11 +21,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: $medium-space;
 }
+
 .grid {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: $large-space;
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -39,7 +41,7 @@
 }
 
 .headerContainer {
-  margin-bottom: 2rem;
+  margin-bottom: $medium-space;
 }
 
 @media (min-width: $bp-medium) {
@@ -48,7 +50,7 @@
   }
 
   .container {
-    padding: 0 3rem 0 3rem;
+    padding: 0 $large-space 0 $large-space;
   }
 }
 
@@ -67,7 +69,7 @@
     grid-template-columns: 1fr;
 
     & > div {
-      margin-bottom: 2rem;
+      margin-bottom: $medium-space;
     }
   }
 }

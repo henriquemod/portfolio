@@ -1,9 +1,10 @@
 @import '../../styles/breakpoints.scss';
+@import '../../styles/spacings.scss';
 
 .container {
   border-radius: 25px;
   box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.4);
-  padding: 1.75rem;
+  padding: $medium-space;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,9 +44,6 @@
 }
 
 @media (min-width: $bp-large) {
-  .container {
-    margin-bottom: 2.5rem;
-  }
   .auto {
     width: 700px;
   }
